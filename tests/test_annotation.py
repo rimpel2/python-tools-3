@@ -1,4 +1,4 @@
-import datetime
+import datetime as dt
 
 
 def test_exists_annotations():
@@ -10,7 +10,7 @@ def test_exists_annotations():
     )
 
     actual_type_hint = actual_annotations["storage_data"]
-    expected_type_hint = dict[datetime.time, int]
+    expected_type_hint = dict[dt.time, int]
     assert actual_type_hint == expected_type_hint, (
         "Убедитесь, что в модуле `main.py` для глобальной переменной "
         "`storage_data` установлена верная аннотация типов."
